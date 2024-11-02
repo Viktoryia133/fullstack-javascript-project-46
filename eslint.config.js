@@ -24,7 +24,7 @@ export default [
       parserOptions: {
         // Eslint doesn't supply ecmaVersion in `parser.js` `context.parserOptions`
         // This is required to avoid ecmaVersion < 2015 error or 'import' / 'export' error
-        ecmaVersion: 'latest',
+        ecmaVersion: 2020,
         sourceType: 'module',
       },
     },
@@ -36,12 +36,7 @@ export default [
   ...compat.extends('airbnb-base'),
   {
     rules: {
-      'no-underscore-dangle': [
-        'error',
-        {
-          allow: ['__filename', '__dirname'],
-        },
-      ],
+      'no-underscore-dangle': [2, { allow: ['__filename', '__dirname'] }],
       'import/extensions': [
         'error',
         {
