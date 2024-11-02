@@ -42,5 +42,5 @@ const parser = (filepath1, filepath2) => {
   const dataParse2 = JSON.parse(data2);
   return diff(dataParse1, dataParse2);
 };
-console.log(parser('C:/Users/37525/OneDrive/Desktop/my projects/mind games/fullstack-javascript-project-46/___fixtures___/file1.json', 'C:/Users/37525/OneDrive/Desktop/my projects/mind games/fullstack-javascript-project-46/___fixtures___/file2.json'));
+
 export default parser;
