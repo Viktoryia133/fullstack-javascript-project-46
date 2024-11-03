@@ -1,6 +1,3 @@
-import { readFileSync } from 'fs';
-
-import path from 'path';
 import _ from 'lodash';
 
 const diff = (data1, data2) => {
@@ -35,12 +32,4 @@ const diff = (data1, data2) => {
   result.push('}');
   return result.join('\n');
 };
-const parser = (filepath1, filepath2) => {
-  const data1 = readFileSync(path.resolve(filepath1), 'utf8');
-  const data2 = readFileSync(path.resolve(filepath2), 'utf8');
-  const dataParse1 = JSON.parse(data1);
-  const dataParse2 = JSON.parse(data2);
-  return diff(dataParse1, dataParse2);
-};
-
-export default parser;
+export default diff;
