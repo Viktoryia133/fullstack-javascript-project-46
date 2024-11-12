@@ -25,9 +25,4 @@ const stylish = (diff, deep = 1) => {
     `${replacer.repeat(deep * spacesCount - 4)}}`,
   ].join('\n');
 };
-export default (diff, style) => {
-  if (style === 'stylish') {
-    return stylish(diff);
-  }
-  return `${JSON.stringify(diff, null, 2)}`;
-};
+export default stylish;
