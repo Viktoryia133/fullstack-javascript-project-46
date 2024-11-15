@@ -1,5 +1,5 @@
 import parseFile from './parsers.js';
-import diff from './index.js';
+import diff from './buildDiff.js';
 
 const parser = (filepath1, filepath2) => {
   const data1 = parseFile(filepath1);
